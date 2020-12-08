@@ -85,6 +85,7 @@ class Query
 		$ch = curl_init();
 		$url = $this->_curlUrl = $this->getUrl($this->_conn->getUrlPrefix()) . $this->getQueryParams(true);
 		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_USERPWD, $this->_conn->getBasic());  
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
