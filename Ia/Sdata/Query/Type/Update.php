@@ -68,8 +68,7 @@ class Update extends Create
     {
         $ch = parent::_configureCurl();
         $xml = $this->getPayload();
-        curl_setopt($ch, CURLOPT_POST, false );     
-        curl_setopt($ch, CURLOPT_USERPWD, parent::_conn->getBasic());        
+        curl_setopt($ch, CURLOPT_POST, false );      
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");   
         curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);        
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(

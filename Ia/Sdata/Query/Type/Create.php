@@ -106,8 +106,7 @@ class Create extends \Ia\Sdata\Query
     {
         $ch = parent::_configureCurl();
         $xml = $this->getPayload();
-        curl_setopt($ch, CURLOPT_POST, true );   
-        curl_setopt($ch, CURLOPT_USERPWD, parent::_conn->getBasic());     
+        curl_setopt($ch, CURLOPT_POST, true );     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);        
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/atom+xml;type=entry',

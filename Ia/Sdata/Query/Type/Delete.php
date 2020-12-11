@@ -12,7 +12,6 @@ class Delete extends Single
     protected function _configureCurl()
     {
         $ch = parent::_configureCurl();
-        curl_setopt($ch, CURLOPT_USERPWD, parent::_conn->getBasic());     
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");   
         return $ch;
     }
